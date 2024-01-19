@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body {
+            background-color: black;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+        }
+
+        .overlay {
+            width: 250px;
+            height: 400px;
+            background-color: #2ea263;
+            border: 3px rgb(67, 244, 161) solid;
+            border-radius: 5px;
+            overflow: hidden;
+            transition: scale 0.3s linear;
+            background: repeating-linear-gradient(rgba(46, 162, 98, 0.195), rgba(46, 162, 98, 0.135) 2px, transparent 2px, transparent 4px);
+        }
+
+        .screen {
+            background-image: url("./bg.jpg");
+            background-size: cover;
+            background-repeat: no-repeat;
+            overflow: hidden;
+            opacity: 0.323;
+            height: 100%;
+            width: 100%;
+            transition: opacity 0.3s linear;
+        }
+
+        .screen:hover {
+            opacity: 1;
+        }
+
+        .header {
+            position: absolute;
+            display: flex;
+            justify-content: center;
+            flex-direction: column;
+            align-items: center;
+            width: 250px;
+            height: 400px;
+        }
+        .overlay:hover{
+            scale: 1.1;
+        }
+
+        .insideDescription{
+            background: repeating-linear-gradient(rgba(255, 255, 255, 0.292),rgba(255, 255, 255, 0.292) 1px,transparent,transparent 2px);
+            opacity: 0;
+            text-align: center;
+            transition: opacity 0.3s linear;
+            padding: 10px;
+            font-weight: bolder;
+        }
+
+        .screen:hover .insideDescription{
+            opacity: 1;
+        }
+
+        .heading{
+           position: absolute;
+           bottom: 200px;
+           transition: bottom 0.3s linear;
+           color: aliceblue;
+        }
+
+        .screen:hover .heading{
+            position: absolute;
+            bottom: 60px;
+        }
+        
+    </style>
+</head>
+<body>
+    <div class="overlay">
+        <div class="screen">
+            <div class="header">
+                <h2 class="heading">Web Development</h2>
+                <p class="insideDescription">
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Deleniti, alias, eligendi eius quia neque et doloribus, nostrum laboriosam voluptatibus praesentium odio iste eveniet architecto itaque facilis omnis error laudantium dolores?
+                </p>
+            </div>
+        </div>
+
+        </div>
+</body>
+</html>
